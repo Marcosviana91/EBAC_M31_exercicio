@@ -7,8 +7,10 @@ const EstiloGlobal = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  body {
-    padding: 0 32px;
+  .container {
+    padding: 0 4px;
+    max-width: 480px;
+    margin: 0 auto;
   }
 `
 

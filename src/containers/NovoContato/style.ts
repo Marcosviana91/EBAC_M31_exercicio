@@ -1,6 +1,6 @@
 import { styled } from 'styled-components'
 
-export const StyledContact = styled.li`
+export const StyledCreateContact = styled.form`
   width: 100%;
   height: max-content;
   padding: 8px;
@@ -18,14 +18,4 @@ export const StyledContact = styled.li`
       text-align: right;
     }
   }
-`
-export const StyledContactList = styled.ul`
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: start;
-  gap: 8px;
-  min-height: 80vh;
-
-  padding: 10px;
 `

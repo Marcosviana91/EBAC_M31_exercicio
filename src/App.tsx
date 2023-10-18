@@ -3,7 +3,7 @@ import { store } from './store'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import Home from './pages/Home'
-import OtherPage from './pages/OtherPage'
+import Create from './pages/Create'
 
 import EstiloGlobal from './styles'
 
@@ -14,7 +14,7 @@ const routes = createBrowserRouter([
   },
   {
     path: '/novo',
-    element: <OtherPage />
+    element: <Create />
   }
 ])
 
