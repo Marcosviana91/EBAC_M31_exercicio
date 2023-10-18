@@ -1,15 +1,28 @@
 import { StyledCreateContact } from './style'
 
 export const CreateContact = () => (
-  <StyledCreateContact>
+  <StyledCreateContact
+    onSubmit={(evt) => {
+      evt.preventDefault()
+      console.log(evt)
+    }}
+  >
+    <label>
+      <h3>Nome: </h3>
+      <input type="text" placeholder="Digite um nome..." />
+    </label>
+    <label>
+      <h3>Telefone: </h3>
+      <input type="tel" placeholder="Digite um telefone..." />
+    </label>
+    <label>
+      <h3>E-mail: </h3>
+      <input type="email" placeholder="Digite um endereço eletrônico..." />
+    </label>
     <div>
-      <h3>Nome:</h3> <output>Fulano de Tal da Silva e Souza</output>
-    </div>
-    <div>
-      <h3>Telefone:</h3> <output>(00) 0.0000-0000</output>
-    </div>
-    <div>
-      <h3>E-mail:</h3> <output>email@teste.com</output>
+      <button type="submit">Salvar</button>
+      <button type="reset">Limpar</button>
+      <button type="button">Cancelar</button>
     </div>
   </StyledCreateContact>
 )

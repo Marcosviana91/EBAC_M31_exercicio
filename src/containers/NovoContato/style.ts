@@ -6,16 +6,26 @@ export const StyledCreateContact = styled.form`
   padding: 8px;
   border: 1px solid black;
   border-radius: 8px;
-  list-style: none;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 
-  div {
+  label {
     display: flex;
     justify-content: space-between;
     align-items: end;
 
-    output {
+    input {
       font-size: 18px;
-      text-align: right;
+      width: 350px;
+      /* border-radius: 4px; */
     }
+  }
+  div {
+    border-top: 1px solid gray;
+    padding-top: 8px;
+    display: flex;
+    justify-content: space-between;
   }
 `
