@@ -23,3 +23,5 @@ npx eslint --fix .
 npm i --save react-router-dom
 import { Link } from 'react-router-dom' //styled
 
+npm install jquery --save
+npm i --save-dev @types/jquery

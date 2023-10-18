@@ -12,7 +12,11 @@ const Create = () => (
           </label>
           <label>
             <h3>Telefone:</h3>
-            <input type="tel" placeholder="Digite um telefone..." />
+            <input
+              id="telefone"
+              type="tel"
+              placeholder="Digite um telefone..."
+            />
           </label>
           <label>
             <h3>E-mail:</h3>
