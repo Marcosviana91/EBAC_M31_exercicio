@@ -63,9 +63,23 @@ const globalSlice = createSlice({
     },
     addContact: (state, action: PayloadAction<Contact>) => {
       state.list = [...state.list, action.payload]
+    },
+    removeContact: (state, action: PayloadAction<string>) => {
+      state.list = state.list.filter((c) => c.id !== action.payload)
+    },
+    editContact: (state, action: PayloadAction<Contact>) => {
+      const temp_contacts_list = state.list.map((c) => {
+        if (c.id !== action.payload.id) {
+          return c
+        } else {
+          return action.payload
+        }
+      })
+      state.list = temp_contacts_list
     }
   }
 })
 
-export const { logToConsole, addContact } = globalSlice.actions
+export const { logToConsole, addContact, editContact, removeContact } =
+  globalSlice.actions
 export default globalSlice.reducer

@@ -8,6 +8,7 @@ const StyleHeader = styled.header`
   text-align: center;
   padding: 8px;
   border-bottom: 2px solid black;
+  z-index: 10;
 `
 
 export default StyleHeader

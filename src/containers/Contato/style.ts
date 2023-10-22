@@ -7,6 +7,7 @@ export const StyledContact = styled.li`
   border: 1px solid black;
   border-radius: 8px;
   list-style: none;
+  position: relative;
 
   h2 {
     font-size: 32px;
@@ -20,6 +21,32 @@ export const StyledContact = styled.li`
     output {
       font-size: 18px;
       text-align: right;
+    }
+  }
+  button {
+    min-width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 8px;
+    color: white;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &#btn_remove,
+    &#btn_edit_cancel {
+      right: 8px;
+      background-color: red;
+    }
+    &#btn_edit {
+      padding: 0 8px;
+      right: 40px;
+      background-color: orangered;
+    }
+    &#btn_edit_save {
+      padding: 0 8px;
+      right: 40px;
+      background-color: green;
     }
   }
 `
