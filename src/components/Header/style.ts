@@ -4,7 +4,7 @@ const StyleHeader = styled.header`
   position: sticky;
   top: 0;
 
-  background-color: aliceblue;
+  background-color: violet;
   text-align: center;
   padding: 8px;
   border-bottom: 2px solid black;

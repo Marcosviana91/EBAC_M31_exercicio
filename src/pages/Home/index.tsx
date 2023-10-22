@@ -1,14 +1,18 @@
+import { StyledButtonCreateContact } from '../../components/Buttons/style'
 import Header from '../../components/Header'
 import { ContactList } from '../../containers/Contato'
 
 const Home = () => (
   <>
     <Header title="Meus Contatos" />
-    <div className="container">
-      <main>
-        <ContactList />
-      </main>
-    </div>
+    <main className="container">
+      <ContactList />
+    </main>
+    <footer>
+      <div className="container">
+        <StyledButtonCreateContact to={'/novo'}>Novo</StyledButtonCreateContact>
+      </div>
+    </footer>
   </>
 )
 

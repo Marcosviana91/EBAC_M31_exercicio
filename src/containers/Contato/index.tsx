@@ -1,22 +1,37 @@
-import { StyledContact, StyledContactList } from './style'
+import { useSelector } from 'react-redux'
+import { RootReducer } from '../../store'
 
-export const Contact = () => (
+import { StyledContact, StyledContactList } from './style'
+import { Contact as PropsContact } from '../../utils/Types'
+
+export const Contact = (props: PropsContact) => (
   <StyledContact>
+    <h2>{props.name}</h2>
     <div>
-      <h3>Nome:</h3> <output>Fulano de Tal da Silva e Souza</output>
+      <h3>Telefone:</h3> <output>{props.tel}</output>
     </div>
     <div>
-      <h3>Telefone:</h3> <output>(00) 0.0000-0000</output>
-    </div>
-    <div>
-      <h3>E-mail:</h3> <output>email@teste.com</output>
+      <h3>E-mail:</h3> <output>{props.email}</output>
     </div>
   </StyledContact>
 )
 
-export const ContactList = () => (
-  <StyledContactList>
-    <Contact></Contact>
-    <Contact></Contact>
-  </StyledContactList>
-)
+export const ContactList = () => {
+  const contactList = useSelector(
+    (state: RootReducer) => state.globalReducer.list
+  )
+
+  return (
+    <StyledContactList>
+      {contactList.map((contact) => (
+        <Contact
+          key={contact.id}
+          id={contact.id}
+          name={contact.name}
+          email={contact.email}
+          tel={contact.tel}
+        />
+      ))}
+    </StyledContactList>
+  )
+}

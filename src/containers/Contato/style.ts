@@ -8,6 +8,10 @@ export const StyledContact = styled.li`
   border-radius: 8px;
   list-style: none;
 
+  h2 {
+    font-size: 32px;
+  }
+
   div {
     display: flex;
     justify-content: space-between;
@@ -28,4 +32,5 @@ export const StyledContactList = styled.ul`
   min-height: 80vh;
 
   padding: 10px;
+  margin-bottom: 50px;
 `
